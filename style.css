@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif; /* Thay đổi font thành Roboto */
+}
+
+.bg-img {
+    background-image: url('img/cover.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+li {
+    list-style:  none;
+}
+.menu {
+    position: fixed;
+    top:0;
+    width: 100%;
+    /*background: transparent;*/
+    display: flex;
+    justify-content: center;
+    /*padding: 15px 0;*/
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    transition: background 0.3s ease;
+}
+.transparent-bg {
+    background: transparent;}
+
+.white-bg {
+    background: white; /* Change background to white when scrolled */
+    color: #1B1B1B;
+}
+
+    .menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        position: relative;
+    }
+
+    .menu li a {
+        color: black;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        line-height: 40px;
+
+    }
+
+    .menu > li:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%; /* Đặt submenu ngay bên dưới phần tử cha */
+        left: 0; /* Đặt submenu căn chỉnh bên trái của phần tử cha */
+        background-color: white; /* Màu nền của submenu */
+        border: 1px solid #ddd; /* Đường viền submenu */
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        z-index: 1000; /* Đảm bảo submenu nằm trên các phần tử khác */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng cho submenu */
+        width: 120%;
+    }
+
+    .submenu > li:hover {
+        background-color: #f0f0f0;
+    }
+
+    .submenu li {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .menu li:hover .submenu {
+        display: block;
+    }
+
+    .search-input {
+        padding: 5px;
+        font-size: 15px;
+        color: #1B1B1B;
+        border: none;
+        background: transparent; /* Không có nền mặc định */
+        font-family: 'Roboto', sans-serif;
+        outline: none; /* Loại bỏ đường viền khi tập trung */
+        width: 150px; /* Đặt chiều rộng của input */
+        margin-left: 90px; /* Khoảng cách từ menu đến input */
+    }
+
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    /*Định dạng danh mục sản phẩm */
+
+    .category {
+        padding: 20px;
+        margin-top: 100px;
+        overflow: auto;
+    }
+
+    .category-item {
+        text-align: center;
+    }
+
+    .category-item img {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .category-item h1 {
+        margin: 10px 0;
+        font-size: 24px;
+    }
+
+    .category-item p {
+        font-size: 18px;
+    }
+
